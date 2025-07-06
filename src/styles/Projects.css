@@ -1,0 +1,160 @@
+ .portfolio-section {
+  padding: 90px 10%;
+  background: #081b29;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 70px;
+  color: #fff;
+}
+
+.sub-title span {
+  color: #0ef;
+}
+
+.portfolio-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.row {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 32%;
+}
+
+.row img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* padding: 0 40px; */
+  /* transition: height 0.5s; */
+   opacity: 0;
+  transition: all 0.5s ease-in-out;
+  padding: 20px 20px;
+}
+
+.layer h5 {
+  color: #fff;
+  font-family: bold;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.layer p {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 0.8;
+}
+
+.row:hover img {
+  transform: scale(1.1);
+}
+
+.row:hover .layer {
+  height: 100%;
+  opacity:1;
+}
+
+/* ✅ Tablet (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .portfolio-section {
+    padding: 60px 7%;
+  }
+
+  .sub-title {
+    font-size: 48px;
+    padding-bottom: 50px;
+  }
+
+  .row {
+    width: 48%;
+  }
+
+  .layer h5 {
+    font-size: 18px;
+  }
+
+  .layer p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ✅ Mobile (480px to 768px) */
+@media (min-width: 480px) and (max-width: 768px) {
+  .portfolio-section {
+    padding: 50px 5%;
+  }
+
+  .sub-title {
+    font-size: 36px;
+    padding-bottom: 40px;
+  }
+
+  .portfolio-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .layer h5 {
+    font-size: 17px;
+  }
+
+  .layer p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ✅ Small Mobile (<480px) */
+@media (max-width: 480px) {
+  .portfolio-section {
+    padding: 40px 3%;
+  }
+
+  .sub-title {
+    font-size: 28px;
+    padding-bottom: 30px;
+  }
+
+  .layer h5 {
+    font-size: 16px;
+  }
+
+  .layer p {
+    font-size: 0.85rem;
+  }
+
+  .contact-icons a,
+  .row i {
+    font-size: 18px;
+  }
+}
