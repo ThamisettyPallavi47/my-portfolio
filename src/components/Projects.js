@@ -14,7 +14,7 @@ const Projects = () => {
       <h2 className="sub-title">Projects</h2>
       <div className="portfolio-images">
         <div className="row">
-          {/* <img src="/images/imageportfolio.jpeg" alt="project 1 Title" /> */}
+          
           <img src={process.env.PUBLIC_URL + "/images/imageportfolio.jpeg"} alt="project 1 Title" />
 
           <div className="layer">
@@ -26,7 +26,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="row">
-          {/* <img src="/images/imageportfolio.jpeg" alt="project 2 Title" /> */}
+         
           <img src={process.env.PUBLIC_URL + "/images/imageportfolio.jpeg"} alt="project 2 Title" />
 
           <div className="layer">
@@ -38,7 +38,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="row">
-          {/* <img src="/images/imageportfolio.jpeg" alt="project 3 Title" /> */}
+          
           <img src={process.env.PUBLIC_URL + "/images/imageportfolio.jpeg"} alt="project 3 Title" />
 
           <div className="layer">

@@ -1,4 +1,4 @@
- .portfolio-section {
+.portfolio-section {
   padding: 90px 10%;
   background: #081b29;
 }
@@ -31,6 +31,8 @@
 
 .row img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 8px;
   display: block;
   transition: transform 0.5s;
@@ -50,9 +52,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* padding: 0 40px; */
-  /* transition: height 0.5s; */
-   opacity: 0;
+  opacity: 0;
   transition: all 0.5s ease-in-out;
   padding: 20px 20px;
 }
@@ -71,13 +71,23 @@
   line-height: 0.8;
 }
 
+.layer a {
+  margin-top: 10px;
+  padding: 6px 14px;
+  background-color: #fff;
+  color: #081b29;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
 .row:hover img {
   transform: scale(1.1);
 }
 
 .row:hover .layer {
-  height: 100%;
-  opacity:1;
+  opacity: 1;
 }
 
 /* ✅ Tablet (768px to 1024px) */
@@ -104,45 +114,47 @@
   }
 }
 
-/* ✅ Mobile (480px to 768px) */
-@media (min-width: 480px) and (max-width: 768px) {
+/* ✅ Mobile & Small Tablets (up to 768px) */
+@media (max-width: 768px) {
   .portfolio-section {
-    padding: 50px 5%;
+    padding: 40px 5%;
   }
 
   .sub-title {
-    font-size: 36px;
-    padding-bottom: 40px;
+    font-size: 32px;
+    padding-bottom: 30px;
   }
 
   .portfolio-images {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
   }
 
   .row {
     width: 100%;
     margin-bottom: 20px;
+    position: relative;
   }
 
-  .layer h5 {
-    font-size: 17px;
+  .row img {
+    transform: none !important;
   }
 
-  .layer p {
-    font-size: 0.9rem;
-  }
-}
-
-/* ✅ Small Mobile (<480px) */
-@media (max-width: 480px) {
-  .portfolio-section {
-    padding: 40px 3%;
-  }
-
-  .sub-title {
-    font-size: 28px;
-    padding-bottom: 30px;
+  .layer {
+    position: absolute;
+    opacity: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), #0ef);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .layer h5 {
@@ -151,10 +163,17 @@
 
   .layer p {
     font-size: 0.85rem;
+    line-height: 1.1;
   }
 
-  .contact-icons a,
-  .row i {
-    font-size: 18px;
+  .layer a {
+    margin-top: 8px;
+    padding: 5px 12px;
+    background-color: #fff;
+    color: #081b29;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
   }
 }
