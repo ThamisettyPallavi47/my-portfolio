@@ -12,7 +12,7 @@ const achievements = [
       "A fun and interactive Math Quiz application designed to test and improve users' arithmetic skills with timed questions, instant feedback, and score tracking",
     imageUrl:
       "https://cdn-icons-png.flaticon.com/512/190/190411.png", // trophy icon
-    certificateLink: "#",
+    certificateLink: "/certificates/pythonibm.png",
     // imageUrl: Certificate1,
   },
   {
@@ -24,7 +24,7 @@ const achievements = [
       "Selected to present an AI-Based Environmental Monitoring and Prediction System analyzer at BIT BASH 2025, showcasing Python & ML skills.",
     imageUrl:
       "https://cdn-icons-png.flaticon.com/512/2910/2910794.png", // presentation icon
-    certificateLink: "#",
+    certificateLink: "/certificates/corejava.jpg",
   },
 ];
 
@@ -78,7 +78,8 @@ export default function Achievements() {
               <p className="achievement-description">{ach.description}</p>
             {ach.certificateLink && (
   <a
-    href={ach.certificateLink}
+    // href={ach.certificateLink}
+    href={process.env.PUBLIC_URL + "/" + ach.certificateLink}
     className="certificate-btn"
     target="_blank"
     rel="noopener noreferrer"

@@ -14,7 +14,8 @@ const AboutMe = () => {
     >
       <div className="about-img">
         <motion.img
-          src="/images/pallavipicture.png"
+          // src="/images/pallavipicture.png"
+            src={process.env.PUBLIC_URL + "/images/pallavipicture.png"}
           alt="Profile"
           initial={{ x: -100 }}
           animate={{ x: 0 }}

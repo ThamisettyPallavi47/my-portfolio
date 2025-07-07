@@ -59,9 +59,15 @@ const Home = () => {
           </a>
         <a href="mailto:pallavithammisetty@gmail.com" target="_blank" rel="noopener noreferrer"><FaEnvelope size={24} /></a>
         </motion.div>
-         <a href="/resume.pdf" download="Tamisetty_Pallavi_Resume.pdf" className="resume-btn">
-           Download Resume⬇️
-          </a>
+         
+          <a
+  href={process.env.PUBLIC_URL + "/tamisettypallaviresume.pdf"}
+  download="Tamisetty_Pallavi_Resume.pdf"
+  className="resume-btn"
+>
+  Download Resume⬇️
+</a>
+
       </div>
     </motion.div>
   );

@@ -14,7 +14,9 @@ const Projects = () => {
       <h2 className="sub-title">Projects</h2>
       <div className="portfolio-images">
         <div className="row">
-          <img src="/images/imageportfolio.jpeg" alt="project 1 Title" />
+          {/* <img src="/images/imageportfolio.jpeg" alt="project 1 Title" /> */}
+          <img src={process.env.PUBLIC_URL + "/images/imageportfolio.jpeg"} alt="project 1 Title" />
+
           <div className="layer">
             <h5>AI-Based Environmental Monitoring and Prediction System </h5>
             <p>An intelligent system that monitors real-time environmental 
@@ -24,7 +26,9 @@ const Projects = () => {
           </div>
         </div>
         <div className="row">
-          <img src="/images/imageportfolio.jpeg" alt="project 2 Title" />
+          {/* <img src="/images/imageportfolio.jpeg" alt="project 2 Title" /> */}
+          <img src={process.env.PUBLIC_URL + "/images/imageportfolio.jpeg"} alt="project 2 Title" />
+
           <div className="layer">
             <h5>AI-Based Job Recommendation System</h5>
             <p>AI-based system that matches job seekers with suitable roles using NLP and ML for personalized Recommendation
@@ -34,7 +38,9 @@ const Projects = () => {
           </div>
         </div>
         <div className="row">
-          <img src="/images/imageportfolio.jpeg" alt="project 3 Title" />
+          {/* <img src="/images/imageportfolio.jpeg" alt="project 3 Title" /> */}
+          <img src={process.env.PUBLIC_URL + "/images/imageportfolio.jpeg"} alt="project 3 Title" />
+
           <div className="layer">
             <h5>Movie Management System</h5>
             <p>A Spring Boot-based Movie Management System that allows users to explore, rate, and review movies,
