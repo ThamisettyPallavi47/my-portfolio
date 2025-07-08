@@ -1,22 +1,4 @@
-// import React from 'react';
-// import { motion } from 'framer-motion';
-// import '../styles/Internship.css';
 
-// const Internship = () => {
-//   return (
-//     <motion.div
-//       className="internship"
-//       initial={{ y: 100 }}
-//       animate={{ y: 0 }}
-//       transition={{ duration: 0.5 }}
-//     >
-//       <h2 className="sub-title">Internship/Work Experience</h2>
-//       <p>No internship experience listed yet.</p>
-//     </motion.div>
-//   );
-// };
-
-// export default Internship;
 import React from "react";
 import '../styles/Internship.css';
 import { motion } from "framer-motion";

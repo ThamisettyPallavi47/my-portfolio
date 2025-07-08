@@ -78,7 +78,7 @@ export default function Achievements() {
               <p className="achievement-description">{ach.description}</p>
             {ach.certificateLink && (
   <a
-    // href={ach.certificateLink}
+ 
     href={process.env.PUBLIC_URL + "/" + ach.certificateLink}
     className="certificate-btn"
     target="_blank"

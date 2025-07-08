@@ -1,7 +1,7 @@
 .achievements-section {
   background-color: #081b29;
   width: 100vw;      /* Full viewport width */
-  height: 100vh;     /* Full viewport height */
+     
   overflow-y: auto;  /* Scroll if content overflows vertically */
   padding: 40px 20px; /* Optional padding */
   box-sizing: border-box;
@@ -11,10 +11,11 @@
 }
 .section-title {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2rem;
   color: #fff;
+  font-family: bold;
 }
 
 .achievements-container {

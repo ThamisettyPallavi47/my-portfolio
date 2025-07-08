@@ -18,7 +18,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="heading1">Technical Skills</h1>
+          <h2 className="heading1">Technical Skills</h2>
           <div className="technical-bars">
             <div className="bar">
               <i className="bx bxl-html5" style={{ color: "#c95d2e" }}></i>

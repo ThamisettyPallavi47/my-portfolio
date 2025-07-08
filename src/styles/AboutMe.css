@@ -6,20 +6,14 @@
   padding: 90px 10%;
   background-color: #081b29;
 }
-/* .about-img img {
-  max-width: 630px;
-  height: auto;
-  width: 100%;
-  border-radius: 8px;
-} */
- .about-img img {
+
+.about-img img {
   width: 350px;
   height: 350px;
   object-fit: cover;
   border-radius: 50%;
-  background-color: #007bff;
-  background-color:#0ef ; 
-  padding: 10px;             /* creates space for bg color ring */
+  background-color: #0ef;
+  padding: 10px;
   box-sizing: content-box;
 }
 
@@ -27,21 +21,21 @@
   font-size: 60px;
   color: #fff;
 }
-.about-text h2 span {
-  color: #0ef;
-}
+
 .about-text h4 {
   font-size: 29px;
   font-weight: 600;
   color: #fff;
   margin: 15px 0 30px;
 }
+
 .about-text p {
   color: #ccc;
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 4rem;
 }
+
 .btn-box {
   display: inline-block;
   padding: 12px 28px;
@@ -54,21 +48,40 @@
   font-weight: 600;
   box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
 }
+
 .btn-box:hover {
   box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
 }
-@media (max-width: 768px) {
+
+/* 📱 Tablet & Mobile */
+@media (max-width: 1024px) {
   .about {
     grid-template-columns: 1fr;
-    padding: 50px 5%;
+    text-align: center;
+    padding: 60px 7%;
   }
+
   .about-img img {
-    max-width: 100%;
+    margin: 0 auto;
+    width: 280px;
+    height: 280px;
   }
+
   .about-text h2 {
-    font-size: 40px;
+    font-size: 42px;
   }
+
   .about-text h4 {
-    font-size: 20px;
+    font-size: 22px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    margin-bottom: 2rem;
+  }
+
+  .btn-box {
+    font-size: 15px;
+    padding: 10px 24px;
   }
 }

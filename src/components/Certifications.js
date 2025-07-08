@@ -54,7 +54,7 @@ const Certificate = () => {
             <p><strong>Duration:</strong> {cert.duration}</p>
             <p><strong>Skills Learned:</strong> {cert.skills}</p>
             <a
-              // href={cert.file}
+            
               href={process.env.PUBLIC_URL + "/" + cert.file}
               target="_blank"
               rel="noopener noreferrer"
