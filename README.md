@@ -22,6 +22,7 @@ It showcases my **projects**, **certificates**, **skills**, **education**, and i
   - **Technical Skills** with animated progress bars  
   - **Professional Skills** with circular radial bars
 - 📜 **Resume Download** — A direct button that downloads your resume as a PDF.
+- 📧 EmailJS Integration (No Backend Needed) — Contact form sends emails directly using EmailJS, no server setup required
 - 📁 **Deployed on GitHub Pages** — Fast and serverless hosting with live updates.
 - 📱 **Mobile Navigation Auto-Close** — When a nav item is clicked on mobile view, the menu automatically closes (great for user experience!).
 - 🧭 **Section Scroll Navigation** — Clicking nav items scrolls to specific sections using HTML IDs.
