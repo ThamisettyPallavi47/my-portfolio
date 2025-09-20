@@ -13,6 +13,7 @@ const Projects = () => {
     >
       <h2 className="sub-title">Projects</h2>
       <div className="portfolio-images">
+        
         <div className="row">
           
           <img src={process.env.PUBLIC_URL + "/images/imageportfolio.jpeg"} alt="project 1 Title" />
@@ -42,11 +43,13 @@ const Projects = () => {
           <img src={process.env.PUBLIC_URL + "/images/imageportfolio.jpeg"} alt="project 3 Title" />
 
           <div className="layer">
-            <h5>Movie Management System</h5>
-            <p>A Spring Boot-based Movie Management System that allows users to explore, rate, and review movies,
-               while admins manage content using Hibernate, Thymeleaf, and MySQL for a personalized and interactive experience</p>
+            <h5>Infosphere - Responsive Blog Posts</h5>
+            <p>Created a responsive blog/news platform using React.js, featuring categorized 
+              articles and a clean user interface.
+ Implemented dark/light mode, responsive design, and a contact form using EmailJS.
+ Developed backend functionality with Node.js and Express.js and deployed the project online.</p>
 
-            <a href="https://github.com/ThamisettyPallavi47/L-TPROJECT" target="_blank" rel="noopener noreferrer">GITHUB</a>
+            <a href="https://thamisettypallavi47.github.io/INFOSPHERE-REACT.JS/" target="_blank" rel="noopener noreferrer">Live Demo</a>
           </div>
         </div>
       </div>

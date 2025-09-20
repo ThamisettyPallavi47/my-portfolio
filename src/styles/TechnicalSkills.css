@@ -31,7 +31,6 @@
   gap: 40px;
 }
 
-/* Desktop: Side-by-side */
 @media (min-width: 1024px) {
   .skills-container {
     flex-direction: row;
@@ -94,15 +93,7 @@
 
 /* === Technical Bars === */
 .technical-bars .bar {
-  margin: 40px 0;
-}
-
-.technical-bars .bar:first-child {
-  margin-top: 0;
-}
-
-.technical-bars .bar:last-child {
-  margin-bottom: 0;
+  margin: 30px 0;
 }
 
 .technical-bars .bar .info {
@@ -112,8 +103,6 @@
 .technical-bars .bar .info span {
   font-size: 17px;
   font-weight: 500;
-  animation: showText 0.5s 1s linear forwards;
-  opacity: 0;
 }
 
 .technical-bars .bar .progressline {
@@ -121,89 +110,29 @@
   border-radius: 10px;
   width: 80%;
   height: 5px;
-  background-color: #000000;
-  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-@keyframes animate {
-  100% {
-    transform: scaleX(1);
-  }
+  background-color: #000;
+  overflow: hidden;
 }
 
 .technical-bars .bar .progressline span {
+  display: block;
   height: 100%;
   background-color: #0ef;
-  position: absolute;
+  position: relative;
   border-radius: 10px;
-  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-  transform: scaleX(0);
-  transform-origin: left;
+  transition: width 1s ease-in-out;
 }
 
-.progressline.html span {
-  width: 90%;
-}
-
-.progressline.css span {
-  width: 60%;
-}
-
-.progressline.javascript span {
-  width: 85%;
-}
-
-.progressline.python span {
-  width: 50%;
-}
-
-.progressline span::after {
+.technical-bars .bar .progressline span::after {
+  content: attr(style);
   position: absolute;
-  padding: 1px 8px;
+  top: -28px;
+  right: -20px;
   background-color: #000;
   color: #fff;
   font-size: 12px;
+  padding: 2px 6px;
   border-radius: 3px;
-  top: -28px;
-  right: -20px;
-  animation: showText 0.5s 1.5s linear forwards;
-  opacity: 0;
-}
-
-.progressline.html span::after {
-  content: "90%";
-}
-
-.progressline.css span::after {
-  content: "60%";
-}
-
-.progressline.javascript span::after {
-  content: "85%";
-}
-
-.progressline.python span::after {
-  content: "50%";
-}
-
-.progressline span::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 2px solid transparent;
-  top: 10px;
-  right: 0;
-  animation: showText 0.5s 1.5s linear forwards;
-  opacity: 0;
-}
-
-@keyframes showText {
-  100% {
-    opacity: 1;
-  }
 }
 
 /* === Radial Bars === */
@@ -233,61 +162,20 @@
 
 .radial-bar .progress-bar {
   stroke-width: 10;
-  stop-color: #000;
-  fill: transparent ;
+  stroke: #000;
+  fill: transparent;
   stroke-dasharray: 502;
   stroke-dashoffset: 502;
-  stroke-linecap: round;
-  animation: animate-bar 1s linear forwards;
 }
 
-@keyframes animate-bar {
-  100% {
-    stroke-dashoffset: -1;
-  }
-}
-
-.path {
+.radial-bar .path {
   stroke-width: 10;
   stroke: #0ef;
   fill: transparent;
   stroke-dasharray: 502;
   stroke-dashoffset: 502;
   stroke-linecap: round;
-}
-
-.path-1 {
-  animation: animate-path1 1s 1s linear forwards;
-}
-.path-2 {
-  animation: animate-path2 1s 1s linear forwards;
-}
-.path-3 {
-  animation: animate-path3 1s 1s linear forwards;
-}
-.path-4 {
-  animation: animate-path4 1s 1s linear forwards;
-}
-
-@keyframes animate-path1 {
-  100% {
-    stroke-dashoffset: 50;
-  }
-}
-@keyframes animate-path2 {
-  100% {
-    stroke-dashoffset: 175;
-  }
-}
-@keyframes animate-path3 {
-  100% {
-    stroke-dashoffset: 125;
-  }
-}
-@keyframes animate-path4 {
-  100% {
-    stroke-dashoffset: 75;
-  }
+  transition: stroke-dashoffset 1.5s ease-in-out;
 }
 
 .radial-bar .percentage {
@@ -297,8 +185,6 @@
   transform: translate(-50%, -50%);
   font-size: 17px;
   font-weight: 500;
-  animation: showText 0.5s 1s linear forwards;
-  opacity: 0;
 }
 
 .radial-bar .text {
@@ -307,9 +193,7 @@
   text-align: center;
   left: 50%;
   bottom: -5px;
-  transform: translateX(-50px);
+  transform: translateX(-50%);
   font-size: 17px;
   font-weight: 500;
-  animation: showText 0.5s 1s linear forwards;
-  opacity: 0;
 }

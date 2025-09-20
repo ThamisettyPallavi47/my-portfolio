@@ -25,14 +25,14 @@ const AboutMe = () => {
         />
       </div>
       <div className="about-text">
-        <h2>AboutMe</h2>
+        <h2>About Us</h2>
         <h4>full stack developer!</h4>
         <p>
-          Enthusiastic and motivated 3rd-year B.Tech student specializing in Data Science, with a solid foundation in web technologies and data analytics.
-           Proficient in HTML, CSS, JavaScript, Python, Power BI, and Microsoft Excel. Currently looking for an internship or 
-           job opportunity to bridge the gap between academic knowledge and industry experience. Passionate about continuous learning, gaining practical exposure,
-            and contributing effectively to dynamic teams. 
-          Eager to kick-start a professional journey where I can grow while delivering value through my skills.
+          B.Tech graduate (2026 pass-out) specializing in Data Science, with a strong foundation in web development and data analytics.
+           Completed a Frontend Development internship at NRKS Skill Development,
+           where I worked on building responsive user interfaces using React.js. Proficient in Python,SQL,HTML, CSS, JavaScript(basic), Power BI, and Microsoft Excel. 
+           Actively seeking a full-time job opportunity where I can apply my technical skills, 
+          contribute effectively to organizational goals, and continue learning in a professional environment.
         </p>
         <a href="https://www.linkedin.com/in/tamisetty-pallavi-901275291/"target="_blank" rel="noopener noreferrer" className="btn-box">More About Me</a>
       </div>

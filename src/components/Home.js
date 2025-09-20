@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Home.css';
 import bgImage from '../assets/pallavibackgroundimage.png';
-import { FaLinkedin, FaGithub,FaEnvelope} from 'react-icons/fa';
+import { FaLinkedin, FaGithub,FaEnvelope} from 'react-icons/fa6';
 
 const Home = () => {
   return (
@@ -35,7 +35,7 @@ const Home = () => {
           animate={{ y: 0 }}
           transition={{ delay: 0.6, duration: 0.5 }}
         >
-          And I'm a <span>Frontend Developer</span>
+          And I'm a <span>MERN Stack Developer</span>
         </motion.h3>
         <motion.p
           initial={{ y: 50 }}

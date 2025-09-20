@@ -17,7 +17,7 @@ const educationData = [
     degree: "Higher Secondary",
     institution: "AP Model School & College",
     year: "2020 - 2022",
-    cgpa: "6.9 CGPA",
+    cgpa: "7.3 CGPA",
     description:
       "Completed higher secondary school with focus on science,and mathematics",
   },
@@ -25,7 +25,7 @@ const educationData = [
     degree: "Bachelor's Degree",
     institution: "SVCET(A)",
     year: "2022 - 2026",
-    cgpa: "8.88 CGPA",
+    cgpa: "8.86 CGPA",
     description:
       "Studied Computer Science Engineering Specialized in Data Science and Machine Learning techniques.",
   },

@@ -2,7 +2,9 @@ import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+// import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa6';
+
 
 const Contact = () => {
   const form = useRef();
@@ -39,8 +41,10 @@ const Contact = () => {
           Let's build something great together! I'm excited to hear your ideas and collaborate on exciting frontend development projects..
         </p>
         <ul className="contact-list">
-          <li><FaEnvelope size={24} /> contact@gmail.com</li>
-          <li><FaPhoneAlt size={24} /> +1234567890</li>
+          <a href="mailto:pallavithammisetty@gmail.com" target="_blank" rel="noopener noreferrer">
+          <li><FaEnvelope size={24} /> pallavithammisetty@gmail.com</li>
+          </a>
+          <li><FaPhone size={24} /> 7801099887</li>
         </ul>
         <div className="contact-icons">
           <a href="mailto:pallavithammisetty@gmail.com" target="_blank" rel="noopener noreferrer"><FaEnvelope size={24} /></a>
