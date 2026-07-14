@@ -1,116 +1,67 @@
-/* */
 .education-section {
-  padding: 60px 50px;
-  
-  background: #081b29;
+  padding: 60px 8% 40px;
+  background: var(--background);
 }
 
-.section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
+.education-section .section-title {
   text-align: center;
-  margin-bottom: 40px;
 }
 
-.timeline-container {
+.education-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.education-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 18px;
+  box-shadow: 0 10px 24px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(14, 239, 214, 0.16);
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
+
+.education-degree {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 12px;
+}
+
+.education-meta {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  position: relative;
-  margin-left: 20px;
-}
-
-.timeline-item {
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-}
-
-.timeline-dot {
-  width: 14px;
-  height: 14px;
-  background-color: #007a5c;
-  border-radius: 50%;
-  position: absolute;
-  left: -30px;
-  top: 8px;
-}
-
-.timeline-content {
-  background: #f9f9f9;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-
-.timeline-year {
-  font-size: 0.9rem;
-  color: #007a5c;
-  font-weight: bold;
-}
-
-.timeline-degree {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin: 5px 0;
-  color:#081b29;
-}
-
-.timeline-institution,
-.timeline-cgpa,
-.timeline-description {
+  gap: 8px;
+  color: var(--secondary-text);
   font-size: 0.95rem;
-  color: #444;
-  margin: 2px 0;
 }
 
-/* Horizontal layout for tablets/desktops */
-@media (min-width: 768px) {
-  .timeline-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-  }
-
-  .timeline-item {
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    position: relative;
-  }
-
-  .timeline-dot {
-    position: relative;
-    top: unset;
-    left: unset;
-    margin-bottom: 10px;
-  }
+.education-meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Small mobile screens */
-@media (max-width: 480px) {
-  .education-section {
-    padding: 40px 10px;
-  }
+@media (max-width: 1024px) {
+  .education-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
-  .timeline-content {
-    padding: 15px;
-  }
-
-  .timeline-degree {
-    font-size: 1rem;
-  }
-
-  .timeline-institution,
-  .timeline-cgpa,
-  .timeline-description {
-    font-size: 0.85rem;
-  }
-
-  .section-title {
-    font-size: 1.5rem;
-  }
-} 
+@media (max-width: 640px) {
+  .education-section { padding: 42px 12px 32px; }
+  .education-cards { grid-template-columns: 1fr; }
+  .education-card { padding: 18px 16px; }
+}

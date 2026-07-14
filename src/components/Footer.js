@@ -10,7 +10,7 @@ const Footer = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <p>Developed with love by Tamisetty Pallavi 2025</p>
+      <p>Developed with love by Tamisetty Pallavi</p>
     </motion.div>
   );
 };

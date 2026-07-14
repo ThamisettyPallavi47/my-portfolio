@@ -1,25 +1,55 @@
- .App {
+.App {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  transition: all 0.3s ease;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-.App.light {
-  background: #ededed;
-  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .App.dark {
-  background: #081b29;
-  color: #ededed;
+  --background: #081b29;
+  --card: rgba(255, 255, 255, 0.045);
+  --card-strong: rgba(255, 255, 255, 0.08);
+  --navbar: #0f1d2a;
+  --text: #f4f7fb;
+  --heading: #ffffff;
+  --secondary-text: #c7d4df;
+  --muted: #9fb2c0;
+  --accent: #0ef;
+  --accent-strong: #00d4ff;
+  --border: rgba(14, 239, 214, 0.18);
+  --button-text: #081b29;
+  --shadow: rgba(0, 0, 0, 0.16);
+}
+
+.App.light {
+  --background: #f5f7fb;
+  --card: #ffffff;
+  --card-strong: #eef5fb;
+  --navbar: #4a90e2;
+  --text: #14253b;
+  --heading: #10253b;
+  --secondary-text: #4f6278;
+  --muted: #71839a;
+  --accent: #0d6efd;
+  --accent-strong: #0a5cd8;
+  --border: rgba(13, 110, 253, 0.18);
+  --button-text: #ffffff;
+  --shadow: rgba(15, 33, 51, 0.12);
+}
+
+body,
+#root {
+  background-color: var(--background);
+  color: var(--text);
 }
 
 .theme-toggle {
   padding: 6px 12px;
-  background: #0ef;
-  color: #081b29;
+  background: var(--accent);
+  color: var(--button-text);
   border: none;
   border-radius: 15px;
   cursor: pointer;
@@ -28,11 +58,12 @@
 }
 
 .theme-toggle:hover {
-  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+  box-shadow: 0 0 5px var(--accent), 0 0 20px var(--accent);
 }
 
 .navbar {
-  background-color: #1a1a2e;
+  background-color: var(--navbar);
+  color: var(--text);
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -43,14 +74,10 @@
   z-index: 1000;
 }
 
-.App.light .navbar {
-  background-color: #4a90e2;
-}
-
 .navbar-brand {
   font-size: 1.3rem;
   font-weight: bold;
-  color: inherit;
+  color: var(--heading);
 }
 
 .nav-toggle {
@@ -58,7 +85,7 @@
   background: none;
   border: none;
   font-size: 1.2rem;
-  color: white;
+  color: var(--text);
   cursor: pointer;
   padding: 5px;
 }
@@ -72,42 +99,43 @@
 
 .nav-links li {
   margin-left: 10px;
-  
   font-family: 'Montserrat', sans-serif;
-
 }
 
 .nav-links a {
-  color: inherit;
+  color: var(--text);
   text-decoration: none;
   font-size: 0.9rem;
   padding: 5px 8px;
 }
 
 .nav-links a.active {
-  background-color: #00d4ff;
-  color: #1a1a2e;
+  background-color: var(--accent);
+  color: var(--button-text);
   border-radius: 5px;
 }
 
 .nav-links a:hover {
-  color: #00d4ff;
+  color: var(--accent);
 }
 
 section {
-  padding-top: 40px; /* Reduced offset for navbar height */
-  /* min-height: 100vh;  */
+  padding-top: 0;
 }
 
 html {
-  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  scroll-behavior: smooth;
 }
 
-/* Responsive adjustments */
+* {
+  box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
   }
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -115,25 +143,30 @@ html {
     top: 50px;
     left: 0;
     width: 100%;
-    background-color: #1a1a2e;
+    background-color: var(--navbar);
     padding: 5px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
+
   .nav-links.open {
     display: flex;
   }
+
   .nav-links li {
     margin: 5px 0;
     text-align: center;
   }
+
   .nav-links a {
     padding: 8px;
     font-size: 1rem;
   }
+
   .theme-toggle {
     margin: 5px auto;
     display: block;
   }
+
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -141,14 +174,6 @@ html {
   }
 }
 
-/* Ensure no horizontal overflow */
-* {
-  box-sizing: border-box;
-}
-
-/* ================= RESPONSIVE FEATURES ADDITION ================= */
-
-/* Tablet (768px–1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .navbar {
     padding: 8px 15px;
@@ -167,14 +192,8 @@ html {
     padding: 5px 10px;
     font-size: 0.8rem;
   }
-
-  .profile-image {
-    width: 120px;
-    height: 120px;
-  }
 }
 
-/* Mobile (480px–768px) */
 @media (min-width: 480px) and (max-width: 767px) {
   .navbar {
     padding: 6px 12px;
@@ -199,14 +218,8 @@ html {
     padding: 4px 8px;
     font-size: 0.75rem;
   }
-
-  .profile-image {
-    width: 100px;
-    height: 100px;
-  }
 }
 
-/* Small Mobile (<480px) */
 @media (max-width: 479px) {
   .navbar {
     padding: 5px 10px;
@@ -228,14 +241,5 @@ html {
   .theme-toggle {
     padding: 3px 6px;
     font-size: 0.65rem;
-  }
-
-  .profile-image {
-    width: 80px;
-    height: 80px;
-  }
-
-  section {
-    padding-top: 30px;
   }
 }

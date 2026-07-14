@@ -1,0 +1,71 @@
+.slider-wrapper {
+  width: 100%;
+}
+
+.slider-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-content {
+  width: 100%;
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.slider-nav-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(14, 239, 214, 0.16);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.App.light .slider-nav-button {
+  color: #12333e;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(18, 51, 62, 0.24);
+  font-weight: 700;
+}
+
+.App.light .slider-nav-button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.slider-nav-button:hover {
+  transform: translateY(-2px);
+  background: rgba(14, 239, 214, 0.3);
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.slider-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.slider-dot.active {
+  background: #0ef;
+  transform: scale(1.15);
+}

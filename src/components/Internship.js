@@ -26,6 +26,14 @@ const Internships = () => {
             <li>web-based application that leverages machine learning</li>
           </ul>
           <p className="tech-stack">Tech Used: machine learning, Python libraries, Flask,OpenCV</p>
+          <a
+            href={process.env.PUBLIC_URL + "/certificates/edunet.jpg"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="certificate-btn"
+          >
+            View Certificate
+          </a>
         </motion.div>
 
         {/* Internship 2 */}
@@ -46,6 +54,14 @@ const Internships = () => {
             <li>Explore modern libraries and tools</li>
           </ul>
           <p className="tech-stack">Tech Used: React.js, JavaScript, HTML, CSS</p>
+          <a
+            href={process.env.PUBLIC_URL + "/certificates/nrkspallavi.jpg"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="certificate-btn"
+          >
+            View Certificate
+          </a>
         </motion.div>
       </div>
     </section>

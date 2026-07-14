@@ -3,6 +3,7 @@
 import React from "react";
 import '../styles/Education.css';
 import { motion } from "framer-motion";
+import { FaSchool, FaCalendarAlt, FaChartLine } from "react-icons/fa";
 
 const educationData = [
   {
@@ -10,24 +11,18 @@ const educationData = [
     institution: "AP Model School & College",
     year: "2019 - 2020",
     cgpa: "9.5 CGPA",
-    description:
-      "Completed high school with focus on english,science,social and mathematics.",
   },
   {
     degree: "Higher Secondary",
     institution: "AP Model School & College",
     year: "2020 - 2022",
     cgpa: "7.3 CGPA",
-    description:
-      "Completed higher secondary school with focus on science,and mathematics",
   },
   {
-    degree: "Bachelor's Degree",
-    institution: "SVCET(A)",
+    degree: "Bachelor of Technology",
+    institution: "Sri Venkateswara College of Engineering & Technology autonomous",
     year: "2022 - 2026",
-    cgpa: "8.86 CGPA",
-    description:
-      "Studied Computer Science Engineering Specialized in Data Science and Machine Learning techniques.",
+    cgpa: "9.02 CGPA",
   },
 ];
 
@@ -35,23 +30,22 @@ const Education = () => {
   return (
     <section className="education-section" id="education">
       <h2 className="section-title">EDUCATION</h2>
-      <div className="timeline-container">
+      <div className="education-cards">
         {educationData.map((item, index) => (
           <motion.div
-            className="timeline-item"
+            className="education-card"
             key={index}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            transition={{ duration: 0.45, delay: index * 0.12 }}
+            whileHover={{ y: -6, boxShadow: "0 14px 28px rgba(0, 0, 0, 0.28)" }}
           >
-            <div className="timeline-dot" />
-            <div className="timeline-content">
-              <span className="timeline-year">{item.year}</span>
-              <h3 className="timeline-degree">{item.degree}</h3>
-              <p className="timeline-institution">{item.institution}</p>
-              <p className="timeline-cgpa">CGPA: {item.cgpa}</p>
-              <p className="timeline-description">{item.description}</p>
+            <h3 className="education-degree">{item.degree}</h3>
+            <div className="education-meta">
+              <span><FaSchool /> {item.institution}</span>
+              <span><FaCalendarAlt /> {item.year}</span>
+              <span><FaChartLine /> {item.cgpa}</span>
             </div>
           </motion.div>
         ))}

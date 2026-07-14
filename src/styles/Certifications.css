@@ -1,16 +1,15 @@
 
 
 .certificates-section {
-  padding: 40px 20px;
-  /* background-color: #f9f9f9; */
-  background: #081b29;
+  padding: 45px 8% 30px;
+  background: var(--background);
   text-align: center;
 }
 
 .certificates-title {
   font-size: 3rem;
-  margin-bottom: 30px;
-  color: #fff;
+  margin-bottom: 24px;
+  color: var(--heading);
   font-family:bold;
 }
 
@@ -22,10 +21,11 @@
 }
 
 .certificate-card {
-  background-color: #fff;
+  background-color: var(--card);
+  border: 1px solid var(--border);
   border-radius: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  padding: 20px;
+  box-shadow: 0 4px 8px var(--shadow);
+  padding: 18px;
   max-width: 350px;
   width: 100%;
   text-align: left;
@@ -38,13 +38,13 @@
 
 .certificate-card h3 {
   font-size: 1.2rem;
-  color: #2c3e50;
+  color: var(--heading);
   margin-bottom: 10px;
 }
 
 .certificate-card p {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--secondary-text);
   margin: 5px 0;
 }
 
@@ -52,8 +52,8 @@
   display: inline-block;
   margin-top: 12px;
   padding: 8px 16px;
-  background-color: #1e90ff;
-  color: white;
+  background-color: var(--accent);
+  color: var(--button-text);
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
@@ -61,7 +61,7 @@
 }
 
 .view-button:hover {
-  background-color: #0d6efd;
+  background-color: var(--accent-strong);
 }
 
 /* Responsive Fixes */

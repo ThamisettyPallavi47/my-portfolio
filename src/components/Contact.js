@@ -38,7 +38,8 @@ const Contact = () => {
         <h2>Contact me</h2>
         <h4>let's work together</h4>
         <p>
-          Let's build something great together! I'm excited to hear your ideas and collaborate on exciting frontend development projects..
+          I'm open to full-time opportunities, freelance projects, and collaborations in Python,
+          MERN Stack, and Data Analytics. If you have an idea or a project, let's connect and build something exceptional together.
         </p>
         <ul className="contact-list">
           <a href="mailto:pallavithammisetty@gmail.com" target="_blank" rel="noopener noreferrer">

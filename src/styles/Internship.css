@@ -1,14 +1,14 @@
  .internship-section {
-  padding: 60px 20px;
-  background: #081b29;
+  padding: 45px 8% 30px;
+  background: var(--background);
   text-align: center;
 }
 
 .section-title {
   font-size: 3rem;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   font-weight: 700;
-  color: #333;
+  color: var(--heading);
 }
 
 /* Container for both internships */
@@ -16,18 +16,18 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-/* Common styling for internship boxes */
 .internship-box {
-  background: #fff;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  padding: 30px 25px;
+  box-shadow: 0 8px 24px var(--shadow);
+  padding: 24px 20px;
   flex: 1 1 300px;
-  max-width: 500px;
+  max-width: 480px;
   transition: transform 0.3s ease;
   text-align: left;
 }
@@ -43,20 +43,21 @@
 }
 
 .internship-box h3 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
+  font-size: 1.45rem;
+  margin-bottom: 8px;
+  color: var(--heading);
 }
 
 .company {
   font-weight: bold;
-  color: #555;
+  color: var(--secondary-text);
   margin-bottom: 5px;
 }
 
 .duration {
   font-size: 0.95rem;
-  color: #888;
-  margin-bottom: 15px;
+  color: var(--muted);
+  margin-bottom: 12px;
 }
 
 .details {
@@ -67,12 +68,12 @@
 .details li {
   margin-bottom: 8px;
   font-size: 1rem;
-  color:#333434;
+  color: var(--secondary-text);
 }
 
 .tech-stack {
   font-style: italic;
-  color: #666;
+  color: var(--muted);
   font-size: 0.95rem;
 }
 
@@ -155,4 +156,21 @@
   .duration {
     font-size: 0.75rem;
   }
+}
+.certificate-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  background: var(--accent-color);
+  color: #fff;
+  border: 2px solid var(--accent-color);
+}
+
+.certificate-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }

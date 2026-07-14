@@ -1,104 +1,120 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Achievements.css';
-// import Certificate1 from "../assets/b267019f-18d2-4476-a9c6-3f0c4eda29a0.png";
-const achievements = [
-  {
-    id: 1,
-    title: "Winner – Math Quiz 2022",
-    date: "Dec 2022",
-    organizer: "ITECHNOFEST 2K22",
-    description:
-      "A fun and interactive Math Quiz application designed to test and improve users' arithmetic skills with timed questions, instant feedback, and score tracking",
-    imageUrl:
-      "https://cdn-icons-png.flaticon.com/512/190/190411.png", // trophy icon
-    // certificateLink: "/certificates/pythonibm.png",
-    // imageUrl: Certificate1,
-  },
-  {
-    id: 2,
-    title: "AI-Based Environmental Monitoring and Prediction System",
-    date: "April 2025",
-    organizer: "BIT BASH",
-    description:
-      "Selected to present an AI-Based Environmental Monitoring and Prediction System analyzer at BIT BASH 2025, showcasing Python & ML skills.",
-    imageUrl:
-      "https://cdn-icons-png.flaticon.com/512/2910/2910794.png", // presentation icon
-    // certificateLink: "/certificates/corejava.jpg",
-  },
-];
+import Slider from './Slider';
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.3,
+const achievementGroups = {
+  Workshops: [
+    {
+      id: 1,
+      title: 'Math Quiz 2022',
+      description: 'Participated in an engaging math quiz event and strengthened problem solving under timed conditions.',
+      imageUrl: 'https://cdn-icons-png.flaticon.com/512/190/190411.png',
+      certificateLink: '',
     },
-  },
+    {
+      id: 2,
+      title: 'Office Master on Power BI',
+      description: 'Participated in a one-day Power BI workshop to gain practical dashboard development skills.',
+      imageUrl: process.env.PUBLIC_URL + '/certificates/powerbi1.jpg',
+      certificateLink: '/certificates/powerbi1.jpg',
+    },
+    {
+      id: 3,
+      title: 'Power BI Workshop',
+      description: 'Learned to build interactive dashboards and visualize business data using Microsoft Power BI.',
+      imageUrl: process.env.PUBLIC_URL + '/certificates/powerbi2.jpg',
+      certificateLink: '/certificates/powerbi2.jpg',
+    },
+  ],
+  Certifications: [
+    {
+      id: 4,
+      title: 'IBM Python for Data Science',
+      description: 'Completed a certification focused on Python programming, data analysis, and practical machine learning workflows.',
+      imageUrl: process.env.PUBLIC_URL + '/certificates/pythonibm.png',
+      certificateLink: '/certificates/pythonibm.png',
+    },
+    {
+      id: 5,
+      title: 'Core Java Certification',
+      description: 'Completed a Java certification covering core programming fundamentals and object-oriented concepts.',
+      imageUrl: process.env.PUBLIC_URL + '/certificates/java.jpg',
+      certificateLink: '/certificates/java.jpg',
+    },
+    {
+      id: 6,
+      title: 'Python Full Stack Development',
+      description: 'Successfully completed Python Full Stack Development training covering full-stack web development fundamentals.',
+      imageUrl: process.env.PUBLIC_URL + '/certificates/pythoninfo.jpg',
+      certificateLink: '/certificates/pythoninfo.jpg',
+    },
+    {
+      id: 7,
+      title: 'UI & UX Developer',
+      description: 'Completed UI/UX Developer training focused on user-centered interface and experience design.',
+      imageUrl: process.env.PUBLIC_URL + '/certificates/uiux.jpg',
+      certificateLink: '/certificates/uiux.jpg',
+    },
+  ],
+  Hackathons: [
+    {
+      id: 8,
+      title: 'OpenAI Academy × NxtWave Regional Buildathon',
+      description: 'Participated in a 2-day AI buildathon focused on developing innovative AI-powered solutions',
+      imageUrl: process.env.PUBLIC_URL + '/certificates/nxtwave.jpeg',
+      certificateLink: '/certificates/nxtwave.jpeg',
+    },
+  ],
 };
 
-const itemVariantsLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0 },
-};
+const tabs = ['Workshops', 'Certifications', 'Hackathons'];
 
-const itemVariantsRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0 },
-};
 export default function Achievements() {
+  const [activeTab, setActiveTab] = useState('Certifications');
+  const activeItems = achievementGroups[activeTab];
+
   return (
     <section className="achievements-section">
-      <h2 className="section-title">Achievements</h2>
-      <motion.div
-        className="achievements-container"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {achievements.map((ach, index) => (
-          <motion.div
-            key={ach.id}
-            className={`achievement-item ${
-              index % 2 === 0 ? "left-layout" : "right-layout"
-            }`}
+      <h2 className="section-title">Achievements & Certifications</h2>
+      <div className="achievement-tabs" role="tablist" aria-label="Achievement categories">
+        {tabs.map((tab) => (
+          <button
+            key={tab}
+            type="button"
+            className={`achievement-tab ${activeTab === tab ? 'active' : ''}`}
+            onClick={() => setActiveTab(tab)}
           >
-            <motion.div
-              className="achievement-text"
-              variants={itemVariantsLeft}
-              
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 0.8 }}
-            >
-              <h3 className="achievement-title">{ach.title}</h3>
-              <p className="achievement-date-organizer">
-                {ach.date} | {ach.organizer}
-              </p>
-              <p className="achievement-description">{ach.description}</p>
-            {ach.certificateLink && (
-  <a
- 
-    href={process.env.PUBLIC_URL + "/" + ach.certificateLink}
-    className="certificate-btn"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View Certificate
-  </a>
-)}
-            </motion.div>
-            <motion.div
-              className="achievement-image"
-              variants={itemVariantsRight}
-              initial="hidden"
-              animate="visible"
-              transition={{ duration: 0.8 }}
-            >
-              <img src={ach.imageUrl} alt={ach.title} />
-            </motion.div>
-          </motion.div>
+            {tab}
+          </button>
         ))}
+      </div>
+
+      <motion.div
+        key={activeTab}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35 }}
+      >
+        <Slider
+          items={activeItems}
+          autoPlay
+          interval={6000}
+          renderItem={(item) => (
+            <div className="achievement-card">
+              <img src={item.imageUrl} alt={item.title} />
+              <div className="achievement-card-content">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                {item.certificateLink && (
+                  <a href={process.env.PUBLIC_URL + item.certificateLink} className="certificate-btn" target="_blank" rel="noopener noreferrer">
+                    View Certificate
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+        />
       </motion.div>
     </section>
   );

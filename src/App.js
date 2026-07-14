@@ -5,7 +5,6 @@ import AboutMe from './components/AboutMe';
 import Education from './components/Education';
 import TechnicalSkills from './components/TechnicalSkills';
 import Projects from './components/Projects';
-import Certifications from './components/Certifications';
 import Internship from './components/Internship';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
@@ -38,9 +37,8 @@ function App() {
           <li><a href="#education" className={activeSection === 'education' ? 'active' : ''} onClick={() => { setActiveSection('education'); toggleNav(); }}>Education</a></li>
           <li><a href="#skills" className={activeSection === 'skills' ? 'active' : ''} onClick={() => { setActiveSection('skills'); toggleNav(); }}>Skills</a></li>
           <li><a href="#project" className={activeSection === 'project' ? 'active' : ''} onClick={() => { setActiveSection('project'); toggleNav(); }}>Project</a></li>
-          <li><a href="#certifications" className={activeSection === 'certifications' ? 'active' : ''} onClick={() => { setActiveSection('certifications'); toggleNav(); }}>Certifications</a></li>
           <li><a href="#internship" className={activeSection === 'internship' ? 'active' : ''} onClick={() => { setActiveSection('internship'); toggleNav(); }}>Internship</a></li>
-          <li><a href="#achievements" className={activeSection === 'achievements' ? 'active' : ''} onClick={() => { setActiveSection('achievements'); toggleNav(); }}>Achievements</a></li>
+          <li><a href="#achievements" className={activeSection === 'achievements' ? 'active' : ''} onClick={() => { setActiveSection('achievements'); toggleNav(); }}>Achievements & Certificates</a></li>
           <li><a href="#contact" className={activeSection === 'contact' ? 'active' : ''} onClick={() => { setActiveSection('contact'); toggleNav(); }}>Contact</a></li>
         </ul>
         <motion.button
@@ -57,7 +55,7 @@ function App() {
       <section id="education"><Education /></section>
       <section id="skills"><TechnicalSkills /></section>
       <section id="project"><Projects /></section>
-      <section id="certifications"><Certifications /></section>
+      
       <section id="internship"><Internship /></section>
       <section id="achievements"><Achievements /></section>
       <section id="contact"><Contact /></section>

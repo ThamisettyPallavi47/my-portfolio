@@ -43,10 +43,10 @@ It showcases my **projects**, **certificates**, **skills**, **education**, and i
 ![Education](./screenshots/education.png)
 
 ### 📜 Certificates
-![Certificates](./screenshots/certificate.png)
+![Certificates](./screenshots/certificates.png)
 
 ### 📥 Resume Download Button
-![Resume](./screenshots/resume.png)
+![Resume](./screenshots/resume1.png)
 
 ---
 
@@ -112,7 +112,7 @@ npm install gh-pages --save-dev
 ## 📫 Contact
 
 - Email: pallavithammisetty@gmail.com  
-- LinkedIn: [Pallavi Thamisetty](https://linkedin.com/in/pallavithammisetty)  
+- LinkedIn: [Pallavi Tamisetty](https://linkedin.com/in/pallavithammisetty)  
 - GitHub: [ThamisettyPallavi47](https://github.com/ThamisettyPallavi47)
 
 
